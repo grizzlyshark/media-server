@@ -1,4 +1,4 @@
-# Media server Install Guide
+# Media Server Install Guide
 
 ## Install ArchLinux
 
