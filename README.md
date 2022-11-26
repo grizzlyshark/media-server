@@ -49,7 +49,7 @@ On your router, assign a static IP to your server and forward ports 8080, 8081, 
 
 ## Install a text editor
 
-**Note:** If you don't like vim, replace vim with nano in this guide. If you opened vim and can't figure out how to close it, enter `:q!` and press `Enter`.
+**Note:** If you don't like vim, replace vim with nano in this guide. If you opened vim and can't figure out how to close it, press `Esc` to enter command mode, then enter `:q!` and press `Enter`.
 
 ```bash
 sudo pacman -S nano vim
