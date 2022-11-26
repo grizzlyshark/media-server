@@ -291,6 +291,13 @@ Restart SABnzbd
 sudo systemctl restart sabnzbd
 ```
 
+**Edit primary user group:**
+
+```bash
+sudo usermod -g media sabnzbd
+sudo groupdel sabnzbd
+```
+
 ### Configure SABnzbd
 
 You should now be able to access the web GUI at `http://$server_ip:8080`.
@@ -305,7 +312,8 @@ You should now be able to access the web GUI at `http://$server_ip:8080`.
   - **Note:** Click through the tabs at the top so that your configs are generated. If you don't visit the `categories` tab first, you may need to come back if Radarr can't detect SABnzbd's categories
 - Take note of your API key in the `General` tab or enter the following in your terminal:
   - > `cat ~/.sabnzbd/sabnzbd.ini | grep api_key`
-- Click `Save Changes`
+- Click on the `Folders` tab and enter `775` in the `Permissions for completed downloads`
+  - Scroll to the bottom of this section and click `Save Changes`
 
 ---
 
