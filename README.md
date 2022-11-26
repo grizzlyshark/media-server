@@ -372,6 +372,15 @@ You should now be able to access the web GUI at `http://$server_ip:8081`.
     > `sudo cat /var/lib/sabnzbd/sabnzbd.ini | grep api_key`
 - Your SABnzbd username and password are not necessary
 
+**Configure Permissions:**
+
+- Select `Media Management` from the navigation bar
+- Click the `Show Advanced` gear icon in the upper right to view advanced options
+- In the `Permissions` section, check the `Set Permissions` box
+- In the `chmod Folder` field, enter `775`
+- In the `chown Group` field, enter `media`
+- Click the `Save Changes` button at the top of the page
+
 ---
 
 ## Install and configure Sonarr
@@ -436,6 +445,15 @@ You should now be able to access the web GUI at `http://$server_ip:8082`.
   - To easily retrieve your key:
     > `sudo cat /var/lib/sabnzbd/sabnzbd.ini | grep api_key`
 - Your SABnzbd username and password are not necessary
+
+**Configure Permissions:**
+
+- Select `Media Management` from the navigation bar
+- Click the `Show Advanced` gear icon in the upper right to view advanced options
+- In the `Permissions` section, check the `Set Permissions` box
+- In the `chmod Folder` field, enter `775`
+- In the `chown Group` field, enter `media`
+- Click the `Save Changes` button at the top of the page
 
 ---
 
