@@ -133,7 +133,7 @@ sudo systemctl start sshd
 
 ## Create users and groups
 
-You will need to create users and groups for the services, and make sure everyone is part of the media group.
+You will need to create users and groups for the services, and make sure everyone is part of the sabnzbd group.
 
 **Create users:**
 
@@ -219,7 +219,7 @@ sudo mount /dev/sdc1 /media/media3
 Take ownership of the mounted drives by entering the following, where \$username is your username. Use the directories that you mounted the drives in, separated by a space:
 
 ```bash
-sudo chown -R $username:media /media/media1 /media/media2 /media/media3
+sudo chown -R $username:sabnzbd /media/media1 /media/media2 /media/media3
 sudo chmod -R a+rx /media/media1 /media/media2 /media/media3
 sudo chmod -R g+wrx /media/media1 /media/media2 /media/media3
 ```
