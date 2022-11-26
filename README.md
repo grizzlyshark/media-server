@@ -142,7 +142,6 @@ sudo useradd -r -s /usr/bin/nologin sabnzbd
 sudo useradd -r -s /usr/bin/nologin radarr
 sudo useradd -r -s /usr/bin/nologin sonarr
 sudo useradd -r -s /usr/bin/nologin plex
-sudo groupadd media
 ```
 
 **Add users to groups:**
@@ -150,11 +149,11 @@ sudo groupadd media
 Replace $user with your username
 
 ```bash
-sudo gpasswd -a $user media
-sudo gpasswd -a sabnzbd media
-sudo gpasswd -a radarr media
-sudo gpasswd -a sonarr media
-sudo gpasswd -a plex media
+sudo gpasswd -a $user sabnzbd
+sudo gpasswd -a sabnzbd sabnzbd
+sudo gpasswd -a radarr sabnzbd
+sudo gpasswd -a sonarr sabnzbd
+sudo gpasswd -a plex sabnzbd
 ```
 
 You must log out and back in for this change to take effect.
@@ -291,13 +290,6 @@ Restart SABnzbd
 sudo systemctl restart sabnzbd
 ```
 
-**Edit primary user group:**
-
-```bash
-sudo usermod -g media sabnzbd
-sudo groupdel sabnzbd
-```
-
 ### Configure SABnzbd
 
 You should now be able to access the web GUI at `http://$server_ip:8080`.
@@ -386,7 +378,7 @@ You should now be able to access the web GUI at `http://$server_ip:8081`.
 - Click the `Show Advanced` gear icon in the upper right to view advanced options
 - In the `Permissions` section, check the `Set Permissions` box
 - In the `chmod Folder` field, enter `775`
-- In the `chown Group` field, enter `media`
+- In the `chown Group` field, enter `sabnzbd`
 - Click the `Save Changes` button at the top of the page
 
 ---
@@ -460,7 +452,7 @@ You should now be able to access the web GUI at `http://$server_ip:8082`.
 - Click the `Show Advanced` gear icon in the upper right to view advanced options
 - In the `Permissions` section, check the `Set Permissions` box
 - In the `chmod Folder` field, enter `775`
-- In the `chown Group` field, enter `media`
+- In the `chown Group` field, enter `sabnzbd`
 - Click the `Save Changes` button at the top of the page
 
 ---
