@@ -271,7 +271,7 @@ rm -rf ~/yay
 **Install SABnzbd:**
 
 ```bash
-sudo yay -S sabnzbd
+yay -S sabnzbd
 sudo systemctl enable sabnzbd
 sudo systemctl start sabnzbd
 ```
